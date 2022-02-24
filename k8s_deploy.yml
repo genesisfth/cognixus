@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodejs-testpod
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: nodejs-testpod
+  template:
+    metadata:
+      labels:
+        app: nodejs-testpod
+    spec:
+      containers:
+      - name: nodejs-img
+        image: nodejs-img:latest
+        ports:
+        - containerPort: 8080
