@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: nodejs-testpod
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: nodejs-testpod
