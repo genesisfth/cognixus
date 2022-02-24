@@ -15,5 +15,6 @@ spec:
       containers:
       - name: nodejs-img
         image: nodejs-img:latest
+        imagePullPolicy: Never
         ports:
         - containerPort: 8080
